@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bgcbody:#4c657c;
+    --navbgc:#25415B;
+    --navtext:#DC796A;
+    --heading: #000000;
+    --family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.wrapper{
+    background-color: var(--bgcbody);
+    height: 100;
+    /* width: 100%; */
+    display: grid;
+    grid-template-rows: 2% 10% 80% 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'nav'
+    'text'
+    'content'
+    'footer'
+    ;
+}
+.navbar{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--navbgc);
+}
+.navitems , #logo{
+    text-decoration: none;
+    color: var(--navtext);
+    font-size: 1.5vmax;
+    font-family: var(--family);
+    letter-spacing: 3px;
+}
+#logo{
+    background-color: #4c657c;
+    padding: 0.5rem 1.3rem;
+    margin-top: 4px;
+    border-radius: 1rem;
+}
+.navitems{
+    padding: 2px 1rem;
+}
+.text{
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#heading{
+    padding-top: 2rem;
+    font-size: 6rem;
+    font-family: var(--family);
+    color: var(--heading);
+}
+#para{
+    padding-top: 1rem;
+    color: var(--navtext);
+    font-size: 2vmax;
+    font-family: var(--family);
+}
+#gallery{
+    padding-top: 3rem;
+    grid-area: content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+   
+}
+img{
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+input{
+    font-family: var(--family);
+    font-size: 1.5rem;
+    padding:0.5rem 4rem;
+    border: none;
+    background-color: var(--navbgc);
+    color: var(--navtext);
+    border-radius: 1rem;
+}
+.pics{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+#pic1{
+    grid-area: 1;
+}

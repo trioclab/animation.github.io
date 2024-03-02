@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    background: linear-gradient(to left, rgb(15, 109, 112), rgb(185, 57, 181) )no-repeat;
+    height: 100%;
+    width: 100%;
+    perspective: 10px;
+    transform-style: preserve-3d;
+}
+.box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#top,#bottom,#left,#right,#front,#back{
+    height: 200px;
+    width: 200px;
+}
+#top,#bottom{
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+}
+#left,#right{
+    background-color: rgb(180, 255, 60);
+    position: absolute;
+    transform: translateZ(-20px) scale(1);
+}
+#front,#back{
+    background-color: rgb(192, 117, 180);
+    position: absolute;
+}
